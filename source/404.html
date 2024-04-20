@@ -1,0 +1,107 @@
+<!--
+Copyright (c) 2024 Benjamin N. Zelnick. All Rights Reserved.
+Hand-crafted with <3
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Page Not Found | Benjamin Zelnick</title>
+        <link rel="icon" href="/favicon.ico" />
+        <style>
+            /*
+            Copyright (c) 2024 Benjamin N. Zelnick. All Rights Reserved.
+            Hand-crafted with <3
+            */
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+            body {
+                font-family: 'Noto Serif', serif;
+            }
+            a {
+                color: mediumseagreen;
+                text-decoration: none;
+            }
+            .sans {
+                font-family: 'Noto Sans', sans-serif;
+            }
+            .all-caps {
+                text-transform: uppercase;
+
+            }
+            a:hover {
+                text-decoration: underline dotted;
+            }
+            .strong {
+                font-size: 300%;
+                font-weight: bold;
+            }
+            .stronger {
+                font-size: 500%;
+                font-weight: 900;
+            }
+            .strong,.stronger {
+                margin-bottom: 10px;
+            }
+            .big-font {
+                font-size: 150%;
+            }
+            .small-font {
+                font-size: 75%;
+            }
+            .italic {
+                font-style: italic;
+            }
+            .lava-gradient-text {
+                background: linear-gradient(to right, darkred, crimson, red);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+            .centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 0px;
+                margin: 0px;
+            }
+            #inside {
+                color: black;
+                font-size: 16pt;
+                text-align: center;
+                width: 95%;
+            }
+            .no-margin-inside * {
+                margin: 0px;
+            }
+            .space-before {
+                margin-top: 12pt;
+            }
+            .more-space-before {
+                margin-top: 18pt;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/chinchang/hint.css@v2.7.0/hint.min.css" />
+    </head>
+    <body>
+        <div id="main">
+            <div class="centered no-margin-inside" id="inside">
+                <p class="stronger lava-gradient-text">Page Not Found</p>
+                <p class="strong hint--right hint--large" aria-label="The server has not found anything matching the Request-URI. No indication is given of whether the condition is temporary or permanent. The 410 (Gone) status code SHOULD be used if the server knows, through some internally configurable mechanism, that an old resource is permanently unavailable and has no forwarding address. This status code is commonly used when the server does not wish to reveal exactly why the request has been refused, or when no other response is applicable. (RFC 2616 &sect;10.4.5)">404</p>
+                <p id="errorDescription" class="big-font space-before">
+                    This isn't the page that you were looking for.
+                </p>
+                <p id="solutionSuggestion" class="space-before">
+                    Lost? Try <a href="/">the homepage</a>.
+                </p>
+            </div>
+        </div>
+    </body>
+    <script>
+        if(window.location.pathname === "/404.html" || window.location.pathname === "/404") {
+            document.getElementById("errorDescription").innerHTML = "We <i>would</i> say that this isn't the page that you were looking for, but for some reason, you directly requested it. So, this <i>is</i> the page that you were looking for, though we don't know why."
+            document.getElementById("solutionSuggestion").innerHTML += "<br /><span class=\"hint--bottom\" aria-label=\"Since you deliberately requested an error page, it seems like you are.\">Bored?</span> Try playing <a href=\"https://play2048.co/\">a game</a>."
+        }
+    </script>
+</html>
