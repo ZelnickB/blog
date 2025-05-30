@@ -210,6 +210,9 @@ widgets:
             GitHub:
                 icon: fab fa-github
                 url: 'https://github.com/ZelnickB'
+            Bluesky:
+                icon: fab fa-bluesky
+                url: 'https://bsky.app/profile/zelnick.dev'
             Mastodon:
                 icon: fab fa-mastodon
                 url: 'https://mastodon.online/@benzelnick'
